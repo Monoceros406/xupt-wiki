@@ -61,7 +61,7 @@ author: [L33Z22L11]
 
 ![长安校区图书馆](./8.jpeg)
 
-![长安校区东区西2门](C:\Users\13054\Documents\GitHub\xupt-wiki\docs\campus\index.assets\6-17841268344062.jpg)
+![长安校区东区西2门](./6.jpg)
 
 #### 实验楼
 - 西区求知路上有1\~3号实验楼。1号实验楼北半侧为理学院，南半侧为“人工智能学院、自动化学院”。2号实验楼为“电子工程学院、集成电路学院”。3号实验楼为通信与信息工程学院。
@@ -84,7 +84,7 @@ author: [L33Z22L11]
 
 ![长安校区东区西2门](7.jpg)
 
-![长安校区旭日苑](C:\Users\13054\Documents\GitHub\xupt-wiki\docs\campus\index.assets\9.jpg)
+![长安校区旭日苑](./9.jpg)
 
 #### 体育设施
 
