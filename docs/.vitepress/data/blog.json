@@ -348,15 +348,75 @@
     "qq": "3146702362"
   },
   {
-    "author": "Luyoung",
-    "title": "",
-    "grade": "2022",
-    "belong": "硬协",
-    "tags": "计算机系统结构,处理器",
-    "link": "https://blog.luliang.website/",
+    "author": "康可",
+    "title": "康可ing",
+    "grade": "2025",
+    "belong": "智邮普创",
+    "tags": "Web安全,CTF",
+    "link": "https://blog.yanxisishi.top/",
     "error": "",
-    "feed": "https://blog.luliang.website/atom.xml",
-    "github": "Luyoung0001",
-    "qq": ""
+    "feed": "https://blog.yanxisishi.top/atom.xml",
+    "github": "",
+    "qq": "3497863696"
+  },
+  {
+    "author": "T00k1",
+    "title": "Tooki-blog",
+    "grade": "2025",
+    "belong": "智邮普创",
+    "tags": "安全,逆向,Misc,CTF,AI",
+    "link": "https://tooki-blog.vercel.app/",
+    "error": "",
+    "feed": "",
+    "github": "tookiiiii",
+    "qq": "3323198776"
+  },
+  {
+    "author": "leeshang",
+    "title": "leeshang's blog",
+    "grade": "2025",
+    "belong": "TC",
+    "tags": "嵌入式,网安,二进制",
+    "link": "https://blog.leeshang.top/",
+    "error": "",
+    "feed": "https://blog.leeshang.top/rss.xml",
+    "github": "jzgs2",
+    "qq": "3073588615"
+  },
+  {
+    "author": "uky",
+    "title": "uky's blog",
+    "grade": "2025",
+    "belong": "智邮普创",
+    "tags": "Web安全,CTF",
+    "link": "https://uky.show/",
+    "error": "",
+    "feed": "",
+    "github": "UK5555544",
+    "qq": "3036074562"
+  },
+  {
+    "author": "msuhroom",
+    "title": "mushroom growing",
+    "grade": "2025",
+    "belong": "信息对抗",
+    "tags": "CTF,二进制",
+    "link": "https://blog.mushfate.top/",
+    "error": "",
+    "feed": "https://blog.mushfate.top/atom.xml",
+    "github": "huabf",
+    "qq": "2940716783"
+  },
+  {
+    "author": "不开心就喝酱油",
+    "title": "",
+    "grade": "2025",
+    "belong": "智邮普创",
+    "tags": "RE,CTF",
+    "link": "https://blog.jiangyou.dpdns.org/",
+    "error": "",
+    "feed": "",
+    "github": "",
+    "qq": "303137046"
   }
 ]
