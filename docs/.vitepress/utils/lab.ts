@@ -12,13 +12,3 @@ export interface Lab {
 	plan: string
 	note: string
 }
-
-export function getAvatar(lab: Lab) {
-	const { qq, github } = lab
-
-	return github
-		? `https://avatars-githubusercontent.webp.se/${github}?s=96`
-		: qq
-			? `https://p.qlogo.cn/gh/${qq}/${qq}/0/`
-			: undefined
-}

@@ -57,7 +57,7 @@
 	list-style-type: lower-roman;
 }
 
-.vp-doc .custom-block > * {
+.vp-doc .custom-block.custom-block.custom-block > * {
 	margin-bottom: 8px;
 }
 

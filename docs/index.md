@@ -13,9 +13,6 @@ hero:
     - text: 开始阅读
       theme: brand
       link: /overview
-    - text: 实验室/码农频道
-      theme: alt
-      link: /coder/
     - text: CO导航
       theme: alt
       link: https://www.cooo.site/
@@ -53,4 +50,32 @@ features:
     icon: 📷
     details: 表白墙、校园社区
     link: /life/forum
+  - title: 实验室与小组
+    icon: 🔬
+    details: 实验室纳新、培养计划
+    link: /coder/
+  - title: 个人博客
+    icon: ✍️
+    details: 校友技术博客汇总
+    link: /coder/blog
+  - title: 兴趣群列表
+    icon: 👥
+    details: QQ兴趣群汇总，一键加群
+    link: /life/groups
+  - title: 学分绩点
+    icon: 💯
+    details: 综合评价、评优保研
+    link: /study/gpa
+  - title: 竞赛与证书
+    icon: 🏆
+    details: 竞赛资讯、证书考试
+    link: /study/contest
+  - title: 周边去处
+    icon: 🗺️
+    details: 学校周边吃喝玩乐
+    link: /life/nearby
+  - title: 趣闻
+    icon: 🤣
+    details: 西邮那些有意思的事
+    link: /campus/anecdote
 ---

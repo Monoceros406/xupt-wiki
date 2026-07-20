@@ -18,7 +18,7 @@ onMounted(shuffleLabs)
 
 <slot />
 
-<div class="center-line">
+<div class="center-line vp-doc">
 	由 <a href="https://docs.qq.com/sheet/DSkFiRmpzcVJHSklM" target="_blank">西邮实验室纳新信息表</a> 生成，可通过在线文档修改信息
 </div>
 

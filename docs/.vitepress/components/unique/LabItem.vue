@@ -1,37 +1,18 @@
 <script setup lang="ts">
 import type { Lab } from '@/utils/lab'
 import { computed } from 'vue'
-import { getAvatar } from '@/utils/lab'
+import { getGithubAvatar, getQqGroupAvatar } from '@/utils/avatar'
 
 const props = defineProps<Lab>()
-const avatar = computed(() => getAvatar(props))
+const avatar = computed(() => getGithubAvatar(props.github) ?? getQqGroupAvatar(props.qq) ?? '')
 </script>
 
 <template>
-<div class="card">
-	<div class="card-face">
-		<img class="blur-bg" :src="avatar" alt="">
-
-		<div class="banner">
-			<img class="avatar" :src="avatar" alt="">
-		</div>
-
-		<div class="name">
-			{{ name }}
-		</div>
-
-		<div class="tag-line">
-			<Badge v-for="tag in tags.split(',')" :key="tag" :text="tag" />
-		</div>
-	</div>
-
-	<div class="card-back">
-		<img class="blur-bg" :src="avatar" alt="">
-
+<BlurCard :avatar="avatar" :name="name" :tags="tags" flip>
+	<template #back>
 		<div class="id">
 			{{ id }}
 		</div>
-
 		<div class="name">
 			{{ name }}
 		</div>
@@ -48,88 +29,11 @@ const avatar = computed(() => getAvatar(props))
 			<Link v-if="qq" icon="ri:qq-fill" copy :text="qq" />
 			<!-- <Link v-if="note" icon="ri:message-2-line" :text="note" /> -->
 		</div>
-	</div>
-</div>
+	</template>
+</BlurCard>
 </template>
 
 <style scoped>
-.card {
-	display: grid;
-	position: relative;
-	perspective: 50rem;
-}
-
-.card-face,
-.card-back {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	position: relative;
-	overflow: hidden;
-	overflow: clip;
-	border-radius: 0.5em;
-	background-color: var(--vp-c-bg-soft);
-	/* stylelint-disable-next-line property-no-vendor-prefix */
-	-webkit-backface-visibility: hidden;
-	backface-visibility: hidden;
-	transition: transform 0.3s;
-	z-index: 0;
-}
-
-.card-face {
-	gap: 1em;
-	padding: 1.5em;
-	text-align: center;
-}
-
-.card-back {
-	gap: 0.5rem;
-	position: absolute;
-	inset: 0;
-	padding: 1rem;
-	transform: rotateY(-180deg);
-}
-
-.card:hover .card-face {
-	transform: rotateY(180deg);
-}
-
-.card:hover .card-back {
-	transform: rotateY(0);
-}
-
-.blur-bg {
-	position: absolute;
-	width: 100%;
-	transform: scale(1.2);
-	filter: saturate(2) contrast(0.5) blur(3em);
-	mix-blend-mode: color;
-	pointer-events: none;
-	z-index: -1;
-}
-
-.card-back .blur-bg {
-	transform: scale(-1.2, 1.2);
-}
-
-.avatar {
-	width: 5rem;
-	height: 5rem;
-	border-radius: 5rem;
-}
-
-.name {
-	font-weight: bold;
-	text-align: center;
-	text-wrap: balance;
-}
-
-.tag-line {
-	flex-grow: 1;
-	font-size: 0.9em;
-}
-
 .id {
 	position: absolute;
 	top: 0;
@@ -140,6 +44,12 @@ const avatar = computed(() => getAvatar(props))
 	mix-blend-mode: color-burn;
 	user-select: none;
 	z-index: -1;
+}
+
+.name {
+	font-weight: bold;
+	text-align: center;
+	text-wrap: balance;
 }
 
 .link-line {

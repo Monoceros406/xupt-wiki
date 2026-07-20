@@ -8,6 +8,7 @@ import DefaultTheme from 'vitepress/theme-without-fonts'
 import { h } from 'vue'
 import VueTippy, { roundArrow } from 'vue-tippy'
 
+import BlurCard from '@/components/atomic/BlurCard.vue'
 import Dropdown from '@/components/atomic/Dropdown.vue'
 import Link from '@/components/atomic/Link.vue'
 import Qrcode from '@/components/atomic/Qrcode.vue'
@@ -26,6 +27,7 @@ import './theme-enhanced.css'
 
 // @keep-sorted
 const globalComponents = {
+	BlurCard,
 	Disclaimer,
 	Dropdown,
 	Icon,

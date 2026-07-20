@@ -76,15 +76,43 @@ export default defineConfig({
 function nav(): DefaultTheme.NavItem[] {
 	return [
 		{
-			text: 'Coder专题',
+			text: 'Coder',
 			items: [
 				{ text: '实验室列表', link: '/coder/' },
 				{ text: '校友博客', link: '/coder/blog' },
 			],
 		},
-		{ text: '校园', link: '/campus/', activeMatch: '^/campus/' },
-		{ text: '学习', link: '/study/', activeMatch: '^/study/' },
-		{ text: '生活', link: '/life/', activeMatch: '^/life/' },
+		{
+			text: '校园',
+			activeMatch: '^/campus/',
+			items: [
+				{ text: '学校简介', link: '/campus/' },
+				{ text: '住宿生活', link: '/campus/accommodation' },
+				{ text: '入学准备', link: '/campus/enrollment' },
+				{ text: '防骗指南', link: '/campus/anti-fraud' },
+			],
+		},
+		{
+			text: '学习',
+			activeMatch: '^/study/',
+			items: [
+				{ text: '学习简介', link: '/study/' },
+				{ text: '课内学业', link: '/study/grades' },
+				{ text: '实验室·兴趣小组', link: '/study/labs' },
+				{ text: '竞赛与证书', link: '/study/contest' },
+			],
+		},
+		{
+			text: '生活',
+			activeMatch: '^/life/',
+			items: [
+				{ text: '生活简介', link: '/life/' },
+				{ text: '校园墙·社区', link: '/life/forum' },
+				{ text: '兴趣群展示', link: '/life/groups' },
+				{ text: '美食推荐', link: '/life/food' },
+				{ text: '快递·外卖', link: '/life/delivery' },
+			],
+		},
 		{
 			text: '关于',
 			items: [
@@ -160,6 +188,7 @@ function sidebar(): DefaultTheme.Sidebar {
 				items: [
 					{ text: '生活简介', link: '/life/' },
 					{ text: '校园墙/社区/二手交易', link: '/life/forum' },
+					{ text: '兴趣群展示', link: '/life/groups' },
 					{ text: '快递和外卖', link: '/life/delivery' },
 					{ text: '美食推荐', link: '/life/food' },
 					{ text: '周边去处', link: '/life/nearby' },
