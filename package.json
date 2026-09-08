@@ -7,7 +7,8 @@
     "dev": "vitepress dev docs --open --host",
     "build": "vitepress build docs",
     "preview": "vitepress preview docs",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
   },
   "dependencies": {
     "@iconify/vue": "^5.0.1",
@@ -20,10 +21,10 @@
   },
   "devDependencies": {
     "@antfu/eslint-config": "^9.3.0",
-    "@zinkawaii/stylelint-config": "^0.5.2",
+    "@types/node": "^22.20.1",
+    "@zinkawaii/eslint-config-css": "0.5.1",
     "@zinkawaii/tsconfig": "^0.1.0",
     "eslint": "^10.9.1",
-    "markdown-it-mathjax3": "4.3.2",
-    "stylelint": "^17.14.1"
+    "markdown-it-mathjax3": "4.3.2"
   }
 }

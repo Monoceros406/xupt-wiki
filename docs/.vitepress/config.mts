@@ -1,5 +1,6 @@
 import type { DefaultTheme } from 'vitepress'
 import { defineConfig } from 'vitepress'
+import { searchEntries } from './search.ts'
 
 // https://vitepress.dev/zh/reference/site-config
 export default defineConfig({
@@ -10,6 +11,33 @@ export default defineConfig({
 	cleanUrls: true,
 
 	themeConfig: {
+		search: {
+			provider: 'local',
+			options: {
+				detailedView: true,
+				miniSearch: {
+					options: {
+						tokenize: text => Array.from(new Intl.Segmenter('zh-CN', { granularity: 'word' }).segment(text)).filter(part => part.isWordLike).map(part => part.segment),
+					},
+					searchOptions: { combineWith: 'AND' },
+				},
+				async _render(src, env, md) {
+					const html = await md.renderAsync(src, env)
+					if (env.frontmatter?.search === false)
+						return ''
+					const entries = searchEntries[env.relativePath] || []
+					return html + entries.map(entry => `<h2>${md.utils.escapeHtml(entry.title)}<a class="header-anchor" href="#${encodeURIComponent(entry.id)}"></a></h2><p>${md.utils.escapeHtml(entry.text)}</p>`).join('')
+				},
+				locales: {
+					root: {
+						translations: {
+							button: { buttonText: '搜索', buttonAriaLabel: '搜索文档' },
+							modal: { noResultsText: '没有找到相关内容', resetButtonTitle: '清除搜索', displayDetails: '显示正文摘要', footer: { selectText: '选择', navigateText: '切换', closeText: '关闭' } },
+						},
+					},
+				},
+			},
+		},
 		// https://vitepress.dev/zh/reference/default-theme-config
 		logo: '/logo.svg',
 		// siteTitle: '',
@@ -116,6 +144,7 @@ function nav(): DefaultTheme.NavItem[] {
 		{
 			text: '关于',
 			items: [
+				{ text: '全部文章', link: '/articles' },
 				{ text: '友情链接', link: '/links' },
 				{ text: '贡献指南', link: '/contributing' },
 				{ text: '更新日志', link: '/changelog' },

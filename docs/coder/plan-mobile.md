@@ -9,7 +9,7 @@ author: [XiyouMobile, Magic462, Abstik, ForeverHamburger, wind-know, nanxun911, 
 
 > 好好学习，天天向上
 >
-> ![](https://wsrv.nl/?url=channel.qpic.cn/psc?/channel/NaDwC23LjvXqrn3RH.9z8Q512dTwGNheN9yp8mzGIJah9W.*5m4aT9*W9xzwfSzPEQ5h5Zih*NQJXy01Z6BNsAgGFY0QoKp3wp.TPT6c2P0!/b=&bo=AAUcAQAFHAERHyg!&ek=1&t=8&tl=1)
+> ![移动应用开发实验室培养计划配图](https://wsrv.nl/?url=channel.qpic.cn/psc?/channel/NaDwC23LjvXqrn3RH.9z8Q512dTwGNheN9yp8mzGIJah9W.*5m4aT9*W9xzwfSzPEQ5h5Zih*NQJXy01Z6BNsAgGFY0QoKp3wp.TPT6c2P0!/b)
 
 ## 写在开始之前
 

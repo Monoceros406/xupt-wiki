@@ -19,6 +19,7 @@ import Footer from '@/components/Footer.vue'
 import Header from '@/components/Header.vue'
 import Logo from '@/components/Logo.vue'
 import NotFound from '@/components/NotFound.vue'
+import RecentArticles from '@/components/RecentArticles.vue'
 import TableAutoSpan from '@/components/TableAutoSpan.vue'
 
 import 'tippy.js/dist/svg-arrow.css'
@@ -60,6 +61,7 @@ export default {
 	extends: DefaultTheme,
 	Layout: () => {
 		return h(DefaultTheme.Layout, null, {
+			'home-features-after': () => h(RecentArticles),
 			'doc-before': () => h(Header),
 			'doc-footer-before': () => h(Author),
 			'doc-after': () => h(Footer),
